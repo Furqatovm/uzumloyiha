@@ -1,0 +1,38 @@
+Online shop:
+
+User register login qilsa keyin zakas shop kira oladi
+Korzinkaga tanlab qoshib qoyish mumkin
+
+User{
+
+    name,
+    age,
+    phone_number
+    order:{
+
+
+    }
+    wishlist:[
+        {
+            id:1
+            tovar_nomi: Telefon
+            price: 1200
+        }
+    ]
+}
+
+
+
+get qiganda 
+data []
+
+localStorege
+
+
+
+
+
+
+Mockapidan register qilib olamiz
+keyin login qilib olamiz
+oxirida figmani tayyorlab olamiz

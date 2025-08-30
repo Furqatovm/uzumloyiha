@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="./src/output.css">
+</head>
+<body>
+    <section class="bg-white w-screen h-screen  flex items-center justify-center">
+        <div class="wrapper-all max-w-[1250px] w-full mx-auto p-2   grid grid-cols-4 h-[100vh] gap-[4rem]">
+            <div class="left col-span-2 relative rounded-[9px] flex items-center justify-center">
+                <img src="./assets/phone.png" class="w-full  rounded-[9px]" alt="">
+                <div class="gray inset-0 bg-[#D9D9D9] opacity-20 absolute w-full h-full  rounded-[9px]"></div>
+            </div>
+            <div class="col-span-2">
+                <form class="col-span-2" id="form">
+                    <h1 class="text-[40px] text-[#313131] font-[600]">Login</h1>
+                    <p class="text-[#313131] opacity-75">Let’s get you all st up so you can access your personal account.</p>
+                    <div class="input grid grid-cols-2 gap-[1.5rem] mt-[2rem]">
+                          <div class="col-span-2 flex flex-col relative">
+                            <label for="email" class="absolute top-[-10px] left-[10px] bg-white text-[14px] text-[#1C1B1F] inline-block">
+                              Email
+                            </label>
+                            <input type="text" id="email" class="py-[10px] px-[1.5rem] border-[1px] border-[#79747E] rounded-[5px] outline-none" autocomplete="off" placeholder="john.doe@gmail.com">
+                          </div>
+
+
+
+                    
+
+                          <div class="col-span-2 flex flex-col relative">
+                            <label for="password" class="absolute top-[-10px] left-[10px] bg-white text-[14px] text-[#1C1B1F] inline-block">
+                                Password
+                            </label>
+                            <input type="password" id="password" class="py-[10px] px-[1.5rem] border-[1px] border-[#79747E] rounded-[5px] outline-none" autocomplete="off" placeholder="•••••••••••••••••••••••••">
+                          </div>
+                    
+
+                          <button id="submit" class="py-[10px] px-[1.5rem] bg-[#3869EB] col-span-2 text-white font-[500] rounded-[5px]">
+                            login
+                          </button>
+                          <a href="#" class="text-[#313131] font-[500] text-center col-span-2">Do'nt have an account <span class="text-[#FF8682]">register</span></a>
+                          <div class="col-span-2 flex items-center my-[1rem]">
+                            <div class="w-[40%] h-[2px] bg-[#313131] opacity-30"></div>
+                            <span class="text-[#313131] text-center col-span bg-white flex-1 opacity-50">Or Sign up with</span>
+                            <div class="w-[40%] h-[2px] bg-[#313131] opacity-30"></div>
+                          </div>
+                          
+                          <div class="btns col-span-2 grid grid-cols-3 gap-[10px]">
+                            <button class="py-[10px] px-[1.5rem] border border-[#3869EB] flex items-center justify-center rounded-[5px]">
+                               <img src="https://tse1.mm.bing.net/th/id/OIP.WEGdBp84oOOZgZ6VZ4jEKAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="w-[30px] h-[30px]" alt="dad">                                 
+                            </button>
+
+                            <button class="py-[10px] px-[1.5rem] border border-[#3869EB] flex items-center justify-center rounded-[5px]">
+                                <img src="https://tse1.mm.bing.net/th/id/OIP.WEGdBp84oOOZgZ6VZ4jEKAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="w-[30px] h-[30px]" alt="dad">                                 
+                             </button>
+
+                             <button class="py-[10px] px-[1.5rem] border border-[#3869EB] flex items-center justify-center rounded-[5px]">
+                                <img src="https://tse1.mm.bing.net/th/id/OIP.WEGdBp84oOOZgZ6VZ4jEKAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="w-[30px] h-[30px]" alt="dad">                                 
+                             </button>
+                          </div>
+                                             
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="./login.js"></script>
+</body>
+</html>
