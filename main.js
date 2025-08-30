@@ -82,7 +82,7 @@ function addUI(data) {
         </div>
         <button
         id=${element.id}
-          class="shop w-full h-[40px] rounded-xl bg-[rgb(127_77_255)] text-white"
+          class="savat shop w-full h-[40px] rounded-xl bg-[rgb(127_77_255)] text-white"
         >
           Savatga
         </button>
@@ -274,9 +274,6 @@ addUiShop(shop);
 
 //+ uzum market
 
-
-
-
 hammasi.addEventListener("click", (e) =>{
   if(e.target.nodeName =="BUTTON"){
     let id =e.target.id;
@@ -287,4 +284,6 @@ hammasi.addEventListener("click", (e) =>{
     console.log(shop);
   }
 })
+
+
 

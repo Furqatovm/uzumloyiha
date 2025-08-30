@@ -22,10 +22,12 @@ function register(){
       })
     
       .then((data) => data.json())
-      .then(value => console.log(value))
+      .then(value => {
+        console.log(value)
+        window.location.href ="index.html"
+      })
       .catch((error) => console.log(error))
       warn.classList.add("hidden");
-      window.location.href ="index.html";
     } else{
       warn.classList.remove("hidden")
     }
@@ -43,4 +45,5 @@ function register(){
     let inputs =document.querySelectorAll("input");
     inputs.forEach((val) =val.value ="")
   };
+  
   
