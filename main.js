@@ -2,7 +2,9 @@ let API = "https://68a44697c123272fb9b20d66.mockapi.io/example/uzum-market";
 let RegisterApi ="https://68b27a61c28940c9e69c9840.mockapi.io/Uzum/register";
 let card = document.getElementById("card");
 let shop_cart = document.getElementById("shop_cart");
+let hammasi =document.getElementById("hammmasi");
 let shop = JSON.parse(localStorage.getItem("shop")) || [];
+
 
 // fomr
 // let Firstname =document.getElementById("firstname");
@@ -10,7 +12,6 @@ let shop = JSON.parse(localStorage.getItem("shop")) || [];
 // let Email =document.getElementById("email");
 // let PhoneNumber =document.getElementById("number");
 // let Password =document.getElementById("password");
-let Form =document.getElementById("form");
 
 
 const getData = async () => {
@@ -230,7 +231,7 @@ function addUiShop(data) {
                         Add to Favorites
                       </button>
 
-                      <button
+                      <button id="${value.id}"
                         type="button"
                         class="inline-flex items-center text-sm font-medium text-red-600 hover:underline dark:text-red-500"
                       >
@@ -275,45 +276,15 @@ addUiShop(shop);
 
 
 
-function register(){
-  let warn =document.getElementById("incorrectconfirm");
-  let password =Form.password.value;
-  let confirmed =Form.confirm.value;
-  if(password ==confirmed){
-    fetch(RegisterApi, {
-      method:"POST",
-      headers :{
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        firstname : Form.firstname.value,
-        lastname : Form.lastname.value,
-        email: Form.email.value,
-        phone : Form.number.value,
-        password : Form.password.value
-      })
-    })
-  
-    .then((data) => data.json())
-    .then(value => console.log(value))
-    .catch((error) => console.log(error))
-    warn.classList.add("hidden");
-    window.location.href ="index.html"
-  } else{
-    warn.classList.remove("hidden")
+
+hammasi.addEventListener("click", (e) =>{
+  if(e.target.nodeName =="BUTTON"){
+    let id =e.target.id;
+   shop = shop.filter((value) => value.id != id)
+   localStorage.setItem("shop", JSON.stringify(shop));
+   shop_cart.innerHTML ="";
+    addUiShop(shop);
+    console.log(shop);
   }
-
-} 
-
-Form.addEventListener("submit", (event)=> {
-  event.preventDefault();
-  register();
-  Form.reset();
-  window.location.href ="index.html";
 })
 
-
-function reset(){
-  let inputs =document.querySelectorAll("input");
-  inputs.forEach((val) =val.value ="")
-};

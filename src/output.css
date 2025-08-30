@@ -1047,3 +1047,7 @@
 .inputt::placeholder{
   color: #1C1B1F';
 }
+
+button, a{
+  cursor: pointer;
+}

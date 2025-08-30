@@ -11,8 +11,8 @@ function llogin () {
       let gmail =Form.email.value;
       let pass =Form.password.value;
       let natija = data.find((value) => value.email === gmail && value.password === pass);
-      let res  =natija == undefined || natija ==false ? false :true
-      if(res ==true){
+      let res  =natija == undefined || natija ==false ? false :true;
+      if(res == true){
         window.location.href ="index.html";
       } else{
         alert("Muvaffaqiyatsiz login bo'ldi")
