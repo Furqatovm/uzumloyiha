@@ -46,4 +46,3 @@ function register(){
     inputs.forEach((val) =val.value ="")
   };
   
-  
